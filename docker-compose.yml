@@ -1,0 +1,7 @@
+services:
+  web:
+    image: apurvapatidar/devops-cicd-app:latest
+    container_name: devops-cicd-compose
+    ports:
+      - "8083:80"
+    restart: always
