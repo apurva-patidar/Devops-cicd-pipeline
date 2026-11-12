@@ -1,4 +1,3 @@
-cat > .github/workflows/ci-cd.yml <<'EOF'
 name: DevOps CI/CD Pipeline
 
 "on":
