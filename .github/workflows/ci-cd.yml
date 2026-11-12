@@ -1,3 +1,4 @@
+
 name: DevOps CI/CD Pipeline
 
 "on":
@@ -22,9 +23,9 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Build and push Docker image
-        uses: docker/build-push-action@v6
-        with:
-          context: .
-          push: true
-          tags: apurvapatidar/devops-cicd-app:latest
+      - name: Build Docker image
+        run: docker build -t apurvapatidar/devops-cicd-app:latest .
+
+      - name: Push Docker image
+        run: docker push apurvapatidar/devops-cicd-app:latest
+
